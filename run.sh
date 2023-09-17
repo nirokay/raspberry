@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Import resources:
-source "resources.conf.sh"
+source ~/raspberry/resources.conf.sh
 
 # Run file:
 $STARTUP_FILE
