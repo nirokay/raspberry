@@ -1,3 +1,4 @@
+#!/bin/bash
 # Resources for this repo
 
 # Location of this repo
