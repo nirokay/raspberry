@@ -17,9 +17,11 @@ reloadConfig
 # FUNCTIONS: ----------------------------------------------------------------------
 
 # Starts a single, in $1 specified bot
-function startBot() {                                              local BOT="$1"
+function startBot() {
+        local BOT="$1"
         local PATH_FULL="$PATH_BOTS/$BOT"
-        local CMD="./start.sh; node"                               [ -f "$PATH_FULL/bot.js" ] && CMD="node bot.js; node"
+        local CMD="./start.sh; node"
+        [ -f "$PATH_FULL/bot.js" ] && CMD="node bot.js; node"
 
         lxterminal --geometry=10x10 -t "Running Bot: $1" -e "cd $PATH_FULL; $CMD"
 }
