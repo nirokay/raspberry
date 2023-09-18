@@ -7,9 +7,6 @@
 #       bots, because i broke my old one :') feelsbadman
 #
 
-# shellcheck disable=SC1090
-source ~/raspberry/helpers.sh
-
 # VARIABLES: ----------------------------------------------------------------------
 PATH_config=~/task-config.sh
 function reloadConfig() {
