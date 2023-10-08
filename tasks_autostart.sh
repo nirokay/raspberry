@@ -24,8 +24,8 @@ function startBot() {
         local CMD="./start.sh; node"
         [ -f "$PATH_FULL/bot.js" ] && CMD="node bot.js; node"
 
-        local FULL_CMD="cd $PATH_FULL && $CMD"
-        $FULL_CMD &
+        cd $PATH_FULL
+        $CMD &
         disown $!
 }
 
@@ -34,9 +34,9 @@ function runBotScript() {
         local SCRIPT="$2"
 
         local PATH_FULL="$PATH_BOTS/$BOT"
-        local FULL_CMD="cd $PATH_FULL && $SCRIPT"
+        cd $PATH_FULL
+        $SCRIPT &
 
-        $FULL_CMD &
         disown $!
 }
 
